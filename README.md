@@ -6,19 +6,21 @@ Sistema desenvolvido para treinamento de desenvolvimento de aplicações web com
 
 - Instale o Python 3.10.7+
 - Instale o Node 16.17.0+
-- Instale o Flask `pip install Flask`
-- Clone o repositório.
-- Crie um ambiente virtual com Python. 
-    - No terminal, com o diretório apontado para flask-server, execute: `venv\Scripts\activate`
-    - Rode o comando `py server.py` para iniciar o servidor Flask.
-- Em outro terminal, com o diretório apontado para o react, execute: 
-    - `npm install react-scripts --save`
-    - `npm start`
+- Com o CMD apontado para o usuário, execute os comandos abaixo:
 
+  - Instale o Flask `pip install Flask`
+  - Instale o Mysql `pip install mysql-connector-python`
+
+- Clone o repositório.
+- Crie um ambiente virtual com Python.
+  - No terminal, com o diretório apontado para flask-server `cd flask-server` , execute: `venv\Scripts\activate`
+  - Rode o comando `py server.py` para iniciar o servidor Flask.
+- Em outro terminal, com o diretório apontado para o react, execute:
+  - `npm install react-scripts --save`
+  - `npm start`
 
 ### Imagem
 
 <p align="center">
   <img src="">
 </p>
-

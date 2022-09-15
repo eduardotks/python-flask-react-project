@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\CODA-FULL\Flask-python-react\flask-server\venv"
+VIRTUAL_ENV="C:\CODA-FULL\flask_react_git\python-flask-react-project\flask-server\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
