@@ -15,8 +15,10 @@ Sistema desenvolvido para treinamento de desenvolvimento de aplicações web com
 - Crie um ambiente virtual com Python.
   - No terminal, com o diretório apontado para flask-server `cd flask-server` , execute: `venv\Scripts\activate`
   - Rode o comando `py server.py` para iniciar o servidor Flask.
+  - Caso não inicie o servidor Flask, utilize o "executar e Depurar" do VSCode.
 - Em outro terminal, com o diretório apontado para o react, execute:
   - `npm install react-scripts --save`
+  - `npm install react-router-dom --save`
   - `npm start`
 
 ### Imagem
