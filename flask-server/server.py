@@ -11,7 +11,7 @@ mydb = mysql.connector.connect(
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
-@app.route('/api/v1/users', methods=['GET'])
+@app.route('/api/v1/carros', methods=['GET'])
 def get_carros():
     mycursor = mydb.cursor() # recebe o banco de dados
     mycursor.execute("SELECT * FROM carros") # consulta

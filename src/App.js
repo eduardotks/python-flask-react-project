@@ -4,7 +4,7 @@ function App() {
   const [data, setData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/api/v1/users")
+    fetch("/api/v1/carros")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -13,16 +13,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {typeof data.members === "undefined" ? (
+    <>
+      {typeof data === "undefined" ? (
         <p>Loading...</p>
       ) : (
-        data.members.map((member, i) => <p key={i}>{member}</p>)
+        data.map((i) => <p key={i[0]}> {i} </p>)
       )}
-    </div>
+    </>
   );
 }
 
 export default App;
-
-
