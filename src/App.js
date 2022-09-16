@@ -1,7 +1,6 @@
 import React from "react";
 //---
-import Tablewithget from "./components/Tabelas/TableWithGet";
-
+import TabelaCarros from "./components/Tabelas/TabelaCarros";
 //----
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 //para criar rotas
@@ -40,19 +39,10 @@ function App() {
                   {/*----------------------------------------------------*/}
                   <NavDropdown.Item
                     as={NavLink}
-                    to="/tablewithget"
-                    href="/tablewithget"
+                    to="/tabelacarros"
+                    href="/tabelacarros"
                   >
-                    Get Tabela
-                  </NavDropdown.Item>
-                  {/*----------------------------------------------------*/}
-
-                  <NavDropdown.Item
-                    as={NavLink}
-                    to="/tablewithinsert"
-                    href="/tablewithinsert"
-                  >
-                    Insert Tabela
+                    Tabela de Carros
                   </NavDropdown.Item>
                   {/*----------------------------------------------------*/}
                 </NavDropdown>
@@ -77,7 +67,7 @@ function App() {
         <div className="container">
           <br />
           <Routes>
-            <Route path="/tableWithGet" element={<Tablewithget />}></Route>
+            <Route path="/tabelacarros" element={<TabelaCarros/>}></Route>
           </Routes>
         </div>
       </BrowserRouter>

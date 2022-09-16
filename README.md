@@ -19,6 +19,7 @@ Sistema desenvolvido para treinamento de desenvolvimento de aplicações web com
 - Em outro terminal, com o diretório apontado para o react, execute:
   - `npm install react-scripts --save`
   - `npm install react-router-dom --save`
+  - `npm install react-hook-form`
   - `npm install react-bootstrap bootstrap`
   - `npm start`
 

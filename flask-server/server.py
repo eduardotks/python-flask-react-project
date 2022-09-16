@@ -8,8 +8,8 @@ mydb = mysql.connector.connect(
 app = Flask(__name__)
 app.config["JSON_SORT_KEYS"] = False
 
-
-@app.route("/api/v1/carros", methods=["GET"])
+# GET
+@app.route("/lista_carros", methods=["GET"])
 def get_carros():
     mycursor = mydb.cursor()  # recebe o banco de dados
     mycursor.execute("SELECT * FROM carros")  # consulta
@@ -30,9 +30,35 @@ def get_carros():
                 "preco": item[6],
             }
         )
-    return make_response(jsonify(mensagem="Lista de Carros.", carros=carros))
+    return make_response(jsonify(carros))
+
+# INSERT
+
+@app.route("/insere_carro", methods=["POST"], strict_slashes=False)
+def insert_carros():
+    carro = request.json
+
+    mycursor = mydb.cursor()  # recebe o banco de dados
+    # f string
+    sql = f" INSERT INTO carros (descricao, marca, modelo, ano, cor, preco) VALUES ('{carro['descricao']}', '{carro['marca']}', '{carro['modelo']}', {carro['ano']}, '{carro['cor']}', '{carro['preco']}')"
+
+    mycursor.execute(sql)  # consulta
+    mydb.commit()  # registra a transação
+
+    return make_response(jsonify(mensagem="Cadastrado com sucesso.", carros=carro))
+
+# DELETE
+@app.route("/delete_carro/<id>", methods=["DELETE"])
+def delete_carro(id):
+    mycursor = mydb.cursor()
+    sql = f"DELETE FROM carros WHERE idcarros = {id}"
+    mycursor.execute(sql)
+    mydb.commit()
+    return make_response(jsonify(mensagem="Deletado com sucesso."))
 
 
+
+#-----teste-----
 # Members API Route
 # @app.route('/members')
 # def members():
